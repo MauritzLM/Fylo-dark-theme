@@ -18,10 +18,12 @@ body {
 }
 
 header {
-    background-color: hsl(217, 28%, 15%);
-    background-image: url(./images/bg-curvy-desktop.svg);
+    /* background-color: hsl(218, 28%, 15%); */
+
+    /* background: linear-gradient(0deg, hsl(218, 28%, 13%) 50%, hsl(218, 28%, 15%) 100%); */
+    background-image: url(./images/bg-curvy-desktop.svg), linear-gradient(hsl(218, 28%, 15%) 32%, hsl(218, 28%, 13%));
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: center;
     background-size: contain;
 
 }
@@ -31,8 +33,10 @@ header {
 header,
 main,
 footer {
-    padding: .5em;
+    padding: 1.2em;
 }
+
+
 
 /* typography */
 
@@ -42,13 +46,28 @@ nav {
     font-family: 'Raleway', sans-serif;
 }
 
+h1 {
+    font-size: 2.3rem;
+    line-height: 1.6;
+}
+
 .info,
 .features,
 form {
     text-align: center;
 }
 
+p,
+li,
+div {
+    line-height: 1.8;
+}
+
 /* images */
+
+.feature img {
+    width: 55px;
+}
 
 /* navigation */
 nav {
@@ -87,19 +106,82 @@ ul a {
 }
 
 /* info section */
-
+.info {
+    padding: 1.8em;
+}
 
 /* features section */
 
 /* testimonials */
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 2em;
+    position: relative;
+}
+
+.testimonials img {
+    position: absolute;
+    top: -1.8em;
+    width: 35px;
+}
+
+.testimonial {
+    background-color: hsl(219, 30%, 18%);
+    padding: 1em;
+    z-index: 2;
+}
+
+.testimonial div {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.testimonial img {
+    position: static;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    z-index: 1;
+}
 
 /* stay productive section */
 
 /* form */
+form {
+    background-color: hsl(219, 30%, 18%);
+    padding: 2em;
+    position: relative;
+    top: 12em;
+}
+
+input,
+button {
+    appearance: none;
+    width: 100%;
+    /* display: block; */
+    padding: 1.2em 2em;
+    border-radius: 40px;
+    font: inherit;
+    border: none;
+}
+
+input {
+    margin-bottom: 1em;
+}
+
+button {
+    background-color: hsl(198, 60%, 50%);
+    color: hsl(0, 0%, 100%);
+}
+
 
 /* footer */
 footer {
     background-color: hsl(216, 53%, 9%);
+    padding-top: 15em;
 }
 
 ion-icon {
