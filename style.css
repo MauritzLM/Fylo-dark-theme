@@ -33,7 +33,7 @@ header {
 header,
 main,
 footer {
-    padding: 1.2em;
+    padding: 1.2em 1.6em;
 }
 
 
@@ -42,12 +42,13 @@ footer {
 
 h1,
 h2,
-nav {
+nav,
+button {
     font-family: 'Raleway', sans-serif;
 }
 
 h1 {
-    font-size: 2.3rem;
+    font-size: 2.2rem;
     line-height: 1.6;
 }
 
@@ -100,6 +101,11 @@ ul a {
     color: hsl(0, 0%, 100%);
 }
 
+/* main */
+/* main {
+    padding: 1.2em 1.4em;
+} */
+
 .info img,
 .stay-productive img {
     width: 100%;
@@ -124,11 +130,11 @@ ul a {
     display: flex;
     flex-direction: column;
     gap: 3.5em;
-    margin: 4em 0;
+    margin: 2em 0;
 }
 
 .feature {
-    padding: 1em;
+    padding: 1em .5em;
 }
 
 .feature h2 {
@@ -142,11 +148,24 @@ ul a {
 
 /* stay productive section */
 
+.stay-productive {
+    margin-top: 8em;
+}
+
+.stay-productive h2 {
+    margin-top: 3em;
+}
+
 .stay-productive a {
     color: hsl(176, 68%, 64%);
     padding-bottom: .5em;
     border-bottom: 1px solid hsl(176, 68%, 64%);
     text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.stay-productive a:hover {
+    border-bottom: none;
 }
 
 .stay-productive a img {
@@ -160,15 +179,15 @@ ul a {
     display: flex;
     flex-direction: column;
     gap: 2em;
-    margin-top: 10em;
+    margin-top: 12em;
     position: relative;
     padding: 1em;
 }
 
 .testimonials img {
     position: absolute;
-    top: -1.8em;
-    left: .5em;
+    top: -0.7em;
+    left: 1.5em;
     width: 35px;
 }
 
@@ -205,14 +224,22 @@ ul a {
 .testimonial div p span {
     font-weight: 400;
     font-size: 1rem;
+    position: relative;
+    bottom: .2em;
 }
 
 /* form */
 form {
     background-color: hsl(219, 30%, 18%);
-    padding: 2em;
+    padding: 2em 1.9em;
     position: relative;
-    top: 12em;
+    top: 14em;
+    border-radius: 10px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.349);
+}
+
+form h2 {
+    margin-bottom: 1.2em;
 }
 
 input,
@@ -227,23 +254,65 @@ button {
 }
 
 input {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
+    margin-top: 1.5em;
 }
 
 button {
     background-color: hsl(198, 60%, 50%);
     color: hsl(0, 0%, 100%);
+    font-weight: 700;
 }
 
 
 /* footer */
 footer {
     background-color: hsl(216, 53%, 9%);
-    padding-top: 15em;
+    padding-top: 18em;
+    line-height: 1.8;
+}
+
+.contact div {
+    display: flex;
+    gap: 2em;
+    margin-top: 2em;
+}
+
+footer div img {
+    align-self: flex-start;
+    position: relative;
+    top: .4em;
+    width: 15px;
+}
+
+footer div p {
+    margin: 0;
+    padding-right: 1.8em;
+}
+
+footer ul {
+    margin-top: 2em;
+}
+
+.about-links {
+    margin-top: 5em;
+}
+
+footer li {
+    line-height: 2.4;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 5em;
 }
 
 ion-icon {
     color: hsl(0, 0%, 100%);
+    width: 20px;
+    height: 20px;
 }
 
 .attribution {
@@ -254,3 +323,5 @@ ion-icon {
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
+
+/* media queries */
