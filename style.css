@@ -11,6 +11,10 @@ html {
 
 
 body {
+    /* background-image: url(./images/bg-curvy-mobile.svg), linear-gradient(hsl(218, 28%, 15%) 5%, hsl(218, 28%, 13%) 10%);
+    background-repeat: no-repeat;
+    background-position: top 6% center; */
+    /* background-size: contain; */
     background-color: hsl(218, 28%, 13%);
     font-size: 1.4rem;
     color: hsl(0, 0%, 100%);
@@ -20,11 +24,13 @@ body {
 header {
     /* background-color: hsl(218, 28%, 15%); */
 
-    /* background: linear-gradient(0deg, hsl(218, 28%, 13%) 50%, hsl(218, 28%, 15%) 100%); */
-    background-image: url(./images/bg-curvy-desktop.svg), linear-gradient(hsl(218, 28%, 15%) 32%, hsl(218, 28%, 13%));
+    background: linear-gradient(0deg, hsl(218, 28%, 13%) 50%, hsl(218, 28%, 15%) 100%);
+    background-image: url(./images/bg-curvy-mobile.svg), linear-gradient(hsl(218, 28%, 15%) 32%, hsl(218, 28%, 13%));
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    display: flex;
+    flex-direction: column;
 
 }
 
@@ -35,8 +41,6 @@ main,
 footer {
     padding: 1.2em 1.6em;
 }
-
-
 
 /* typography */
 
@@ -68,11 +72,7 @@ div {
     line-height: 1.6;
 }
 
-/* images */
 
-.feature img {
-    width: 55px;
-}
 
 /* navigation */
 nav {
@@ -83,7 +83,7 @@ nav {
 
 nav img {
     display: block;
-    width: 30%;
+    width: 90px;
 }
 
 nav ul {
@@ -102,9 +102,10 @@ ul a {
 }
 
 /* main */
-/* main {
-    padding: 1.2em 1.4em;
-} */
+main {
+    display: flex;
+    flex-direction: column;
+}
 
 .info img,
 .stay-productive img {
@@ -127,14 +128,17 @@ ul a {
 
 /* features section */
 .features {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 3.5em;
     margin: 2em 0;
 }
 
 .feature {
     padding: 1em .5em;
+}
+
+.feature img {
+    width: 55px;
 }
 
 .feature h2 {
@@ -150,11 +154,14 @@ ul a {
 
 .stay-productive {
     margin-top: 8em;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
 }
 
-.stay-productive h2 {
+/* .stay-productive h2 {
     margin-top: 3em;
-}
+} */
 
 .stay-productive a {
     color: hsl(176, 68%, 64%);
@@ -230,7 +237,7 @@ ul a {
 
 /* form */
 form {
-    background-color: hsl(219, 30%, 18%);
+    background-color: hsl(217, 28%, 15%);
     padding: 2em 1.9em;
     position: relative;
     top: 14em;
@@ -325,3 +332,125 @@ ion-icon {
 }
 
 /* media queries */
+@media screen and (min-width: 770px) {
+
+    .info img,
+    .stay-productive img {
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    /* body {} */
+
+    p {
+        font-size: 1.6rem;
+    }
+
+    header {
+        background-image: url(./images/bg-curvy-desktop.svg);
+        background-position: bottom;
+        background-color: hsl(218, 28%, 15%);
+        padding: 3em 4em 0 4em;
+        margin-bottom: 4em;
+    }
+
+
+    /* nav {
+        justify-content: space-around;
+    } */
+
+    nav img {
+        width: 140px;
+
+    }
+
+    nav ul {
+        gap: 4em;
+    }
+
+    .info {
+        width: 55%;
+        align-self: center;
+    }
+
+    /* .info img {
+        width: auto;
+    } */
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    .info p {
+        font-size: 1.6rem;
+        padding: 0 6em;
+    }
+
+    .info button {
+        width: 38%;
+    }
+
+    main {
+        align-items: center;
+    }
+
+    .features {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        width: 60%;
+        gap: 5em;
+    }
+
+    .feature img {
+        width: auto;
+        height: 70px;
+    }
+
+    .features h2 {
+        font-size: 2rem;
+    }
+
+    .stay-productive {
+        flex-direction: row;
+        width: 85%;
+    }
+
+    .stay-productive img {
+        width: auto;
+    }
+
+    .stay-productive div {
+        align-self: center;
+    }
+
+    .stay-productive h2 {
+        font-size: 3.5rem;
+        line-height: 1.2;
+        width: 50%;
+    }
+
+    .testimonials {
+        width: 85%;
+    }
+
+    .testimonial {
+        padding: 1.4em 2em;
+    }
+
+    .testimonial p {
+        font-size: 1.4rem;
+    }
+
+    form {
+        width: 60%;
+    }
+
+
+}
+
+@media screen and (min-width: 1050px) {
+    .testimonials {
+        flex-direction: row;
+    }
+}
