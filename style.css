@@ -5,16 +5,9 @@
 html {
     font-size: 10px;
     font-family: 'Open Sans', sans-serif;
-
 }
 
-
-
 body {
-    /* background-image: url(./images/bg-curvy-mobile.svg), linear-gradient(hsl(218, 28%, 15%) 5%, hsl(218, 28%, 13%) 10%);
-    background-repeat: no-repeat;
-    background-position: top 6% center; */
-    /* background-size: contain; */
     background-color: hsl(218, 28%, 13%);
     font-size: 1.4rem;
     color: hsl(0, 0%, 100%);
@@ -23,8 +16,6 @@ body {
 }
 
 header {
-    /* background-color: hsl(218, 28%, 15%); */
-
     background: linear-gradient(0deg, hsl(218, 28%, 13%) 50%, hsl(218, 28%, 15%) 100%);
     background-image: url(./images/bg-curvy-mobile.svg), linear-gradient(hsl(218, 28%, 15%) 32%, hsl(218, 28%, 13%));
     background-repeat: no-repeat;
@@ -32,7 +23,6 @@ header {
     background-size: contain;
     display: flex;
     flex-direction: column;
-
 }
 
 /* general styles */
@@ -72,8 +62,6 @@ li,
 div {
     line-height: 1.6;
 }
-
-
 
 /* navigation */
 nav {
@@ -164,10 +152,6 @@ main {
     flex-direction: column;
     gap: 3em;
 }
-
-/* .stay-productive h2 {
-    margin-top: 3em;
-} */
 
 .stay-productive a {
     color: hsl(176, 68%, 64%);
@@ -276,17 +260,12 @@ button {
     border: none;
 }
 
-/* input {
-    margin-bottom: 2em;
-    margin-top: 1.5em;
-} */
-
 /* error message */
 .error {
     position: absolute;
     font-size: 1rem;
-    bottom: 2em;
-    left: 12em;
+    bottom: 9.5em;
+    left: 6em;
     color: hsl(0, 100%, 63%);
     visibility: hidden;
 }
@@ -294,7 +273,6 @@ button {
 input:invalid+.error {
     visibility: visible;
 }
-
 
 button {
     background-color: hsl(198, 60%, 50%);
@@ -313,7 +291,6 @@ footer {
     background-color: hsl(216, 53%, 9%);
     padding-top: 18em;
     line-height: 1.8;
-
 }
 
 .footer-content div {
@@ -441,12 +418,12 @@ ion-icon:hover {
 }
 
 @media screen and (min-width: 1200px) {
-    /* body {} */
 
     p {
         font-size: 1.6rem;
     }
 
+    /* header */
     header {
         background-image: url(./images/bg-curvy-desktop.svg);
         background-position: bottom;
@@ -454,11 +431,6 @@ ion-icon:hover {
         padding: 3em 4em 0 4em;
         margin-bottom: 4em;
     }
-
-
-    /* nav {
-        justify-content: space-around;
-    } */
 
     nav img {
         width: 140px;
@@ -469,14 +441,11 @@ ion-icon:hover {
         gap: 4em;
     }
 
+    /* info section */
     .info {
         width: 55%;
         align-self: center;
     }
-
-    /* .info img {
-        width: auto;
-    } */
 
     h1 {
         font-size: 3.5rem;
@@ -491,10 +460,12 @@ ion-icon:hover {
         width: 38%;
     }
 
+    /* main */
     main {
         align-items: center;
     }
 
+    /* features section */
     .features {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -511,6 +482,7 @@ ion-icon:hover {
         font-size: 2rem;
     }
 
+    /* stay productive section */
     .stay-productive {
         flex-direction: row;
         width: 85%;
@@ -530,6 +502,7 @@ ion-icon:hover {
         width: 58%;
     }
 
+    /* tesimonials section */
     .testimonials {
         width: 85%;
     }
@@ -546,15 +519,21 @@ ion-icon:hover {
         font-size: 1.25rem;
     }
 
+    /* form */
     form {
         width: 60%;
-        /* padding: ; */
     }
 
     form p {
         font-size: 1.4rem;
     }
 
+    .error {
+        bottom: 2em;
+        left: 12em;
+    }
+
+    /* footer */
     footer {
         padding-left: 6em;
         padding-right: 3em;
@@ -586,7 +565,7 @@ ion-icon:hover {
 
     .footer-content .social-links {
         margin: 0;
-        height: fit-content;
+        height: 36.5px;
     }
 
     .attribution {
